@@ -1,6 +1,6 @@
 /* 
     Define the routeHandler functionality
-    The returned payload will be {welcome: name}
+    The returned payload will be {welcome: "Hey there name"}
     If a name wasn't sent in the query string, default to hot stuff
 */
 let routeHandler = {
