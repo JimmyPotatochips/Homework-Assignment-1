@@ -1,10 +1,10 @@
 /* 
     Define the routeHandler functionality
-    The returned payload will be {welcome: "Hey there name"}
-    If a name wasn't sent in the query string, default to hot stuff
 */
 let routeHandler = {
     hello: (data, callback) => {
+        // The returned payload will be {welcome: "Hey there name"}
+        // If a name wasn't sent in the query string, default to hot stuff
         // If the HTTP method is not post, then return a 404.
         if (data.method === 'post') {
             let payload = {};
