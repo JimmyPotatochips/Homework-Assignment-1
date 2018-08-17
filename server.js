@@ -43,7 +43,7 @@ let requestProperties = (req) => {
     let parsedUrl = url.parse(req.url, true);
 
     let requestObject = {
-        path: (() => {return (parsedUrl.pathname).replace(/^\/+|\/+$/g, '');})(),
+        path: (() => {return ((parsedUrl.pathname).replace(/^\/+|\/+$/g, '')).toLowerCase();})(),
         queryString: parsedUrl.query,
         method: req.method.toLowerCase(),
         headers: req.headers

@@ -5,10 +5,15 @@
 */
 let routeHandler = {
     hello: (data, callback) => {
-        let payload = {};
-        let name = data.queryString['name'] !== undefined ? data.queryString['name'] : 'hot stuff';
-        payload = {welcome: `Hey there ${name}`};
-        callback(200, payload);
+        // If the HTTP method is not post, then return a 404.
+        if (data.method === 'post') {
+            let payload = {};
+            let name = data.queryString['name'] !== undefined ? data.queryString['name'] : 'hot stuff';
+            payload = { welcome: `Hey there ${name}` };
+            callback(200, payload);
+        } else {
+            callback(404);
+        }
     },
     notFound: (data, callback) => callback(404)
 };

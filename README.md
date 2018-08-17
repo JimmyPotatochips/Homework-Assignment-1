@@ -6,3 +6,5 @@ a name parameter in the query string, eg., '/hello?name=jim'
 
 You will receive a JSON object {"welcome":"Hey there 'name'"}, if no name is
 provided in the query string, then a default value will be used.
+
+If the call to the /hello route is not an HTTP Post method, it will return a 404.
