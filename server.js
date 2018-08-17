@@ -10,7 +10,7 @@ const routes = require('./routes');
     Only method exported for server, required to create an instance of a server.
     If a port is not provided, the default port will be assigned to 3000 
 */
-let Create = (port) => {
+let create = (port) => {
     let ws = http.createServer((req, res) => {
         let request = requestProperties(req);
         
@@ -55,5 +55,5 @@ let requestProperties = (req) => {
     Exports Section 
 */
 module.exports = {
-    Create: Create
+    create
 };

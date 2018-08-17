@@ -18,4 +18,4 @@ const server = require('./server');
 /* 
     Main Section 
 */
-server.Create(2000);
+server.create(2000);

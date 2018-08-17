@@ -29,6 +29,6 @@ let router = {
     Exports Section 
 */
 module.exports = {
-    router: router,
-    routeHandler: routeHandler
+    router,
+    routeHandler
 };
